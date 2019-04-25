@@ -1,0 +1,50 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+    <mat-card fxFlex="100" [fxFlex.md]="100" [fxFlex.sm]="100" [fxFlex.xs]="100">
+      <mat-card-title fxLayoutAlign="center">{{ 'CreateUser.Title' | translate }}</mat-card-title>
+      <mat-card-content>
+        <br/>
+        <form [formGroup]="createUserForm" (ngSubmit)="singUp()">
+          
+        <div fxLayout="row">
+            <mat-form-field fxFill>
+                <input type="text" matInput placeholder="{{ 'CreateUser.Name' | translate}}" formControlName="nameCtrl" minlength="3" required>
+                <mat-error *ngIf="createUserForm.get('nameCtrl').invalid">{{getNameErrorMessage()}}</mat-error>
+                
+              </mat-form-field>
+          </div>
+
+          <div fxLayout="row">
+            <mat-form-field fxFill>
+                <input type="text" matInput placeholder="{{ 'CreateUser.Email' | translate}}" formControlName="emailCtrl"
+                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,3})+$" required>
+                <mat-error *ngIf="createUserForm.get('emailCtrl').invalid">{{getEmailErrorMessage()}}</mat-error>
+                
+              </mat-form-field>
+          </div>
+
+          <div fxLayout="row">
+            <mat-form-field fxFill>
+                <input type="text" matInput placeholder="{{ 'CreateUser.Phone' | translate}}" formControlName="phoneCtrl" 
+                minlength="9" maxlength="9" OnlyNumber="true" required>
+                <mat-error *ngIf="createUserForm.get('phoneCtrl').invalid">{{getPhoneErrorMessage()}}</mat-error>
+                
+              </mat-form-field>
+          </div>
+          
+          <div fxLayout="row">
+              <mat-form-field fxFill>
+                <input type="password" matInput placeholder="{{ 'CreateUser.Password' | translate }}" formControlName="passwordCtrl" required>
+                <mat-error *ngIf="createUserForm.get('passwordCtrl').invalid">{{getPasswordErrorMessage()}}</mat-error>
+              </mat-form-field>
+          </div>
+          
+          <br/>
+          <div fxLayout="row" fxLayoutAlign="space-around center">
+            <button class="buttonGroup" type="submit" (click)="close()" mat-raised-button>{{ 'CreateUser.Close' | translate }}</button>
+            <button class="buttonGroup" type="submit" (click)="singUp()" mat-raised-button color="primary">{{ 'CreateUser.SignUp' | translate }}</button>
+          </div>
+
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>

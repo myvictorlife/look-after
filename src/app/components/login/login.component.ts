@@ -1,6 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter  } from  '@angular/core';
-import { MatDialog } from  '@angular/material';
-import { DialogComponent } from '../dialog/dialog.component';
+import { Component, OnInit, Output, EventEmitter } from  '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { TranslateService } from "@ngx-translate/core";
 
@@ -11,37 +9,32 @@ import { TranslateService } from "@ngx-translate/core";
 })
 export class LoginComponent implements OnInit {
 
-  form: FormGroup = new FormGroup({
+  loginForm: FormGroup = new FormGroup({
     emailControl: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl(''),
+    password: new FormControl('', [Validators.required]),
   });
-
-  submit() {
-    if (this.form.valid) {
-      this.submitEM.emit(this.form.value);
-    }
-  }
-  @Input() error: string | null;
 
   @Output() submitEM = new EventEmitter();
 
-  constructor(private  dialog:  MatDialog, public translate: TranslateService) { }
+  constructor(public translate: TranslateService) { }
 
   ngOnInit() {
   }
 
   login(){
-    this.dialog.open(DialogComponent,{ data: { message:  "Error!!!" }});
+    if (this.loginForm.valid) {
+      this.submitEM.emit(this.loginForm.value);
+    }
   }
 
   getEmailErrorMessage() {
-    return this.form.get('emailControl').hasError('required') ? this.translate.instant('Login.MustBeValue'):
-        this.form.get('emailControl').hasError('email') ? this.translate.instant('Login.InvalidEmail'):
+    return this.loginForm.get('emailControl').hasError('required') ? this.translate.instant('Login.MustBeValue'):
+        this.loginForm.get('emailControl').hasError('email') ? this.translate.instant('Login.InvalidEmail'):
             '';
   }
 
   getPasswordErrorMessage() {
-    return this.form.get('password').hasError('required') ? this.translate.instant('Login.MustBeValue') : '';
+    return this.loginForm.get('password').hasError('required') ? this.translate.instant('Login.MustBeValue') : '';
   }
 
 }

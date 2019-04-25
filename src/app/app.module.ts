@@ -27,6 +27,10 @@ import { SharedService } from './service/common/shared.service';
 import { GenericUtilities } from './utilities/generic-utilities';
 import { HomeComponent } from './components/home/home.component';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { CreateUserComponent } from './components/create-user/create-user.component';
+import { OnlyNumber } from './directives/only-number.directive';
+import { FooterComponent } from './components/navigation/footer/footer.component';
+import { HeaderComponent } from './components/navigation/header/header.component';
 
 export function ConfigLoader(configService: ConfigService) {
     return () => configService.load();
@@ -41,7 +45,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     LoginComponent,
     HomeComponent,
-    DialogComponent
+    DialogComponent,
+    CreateUserComponent,
+    OnlyNumber,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserAnimationsModule,

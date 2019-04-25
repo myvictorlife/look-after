@@ -1,15 +1,5 @@
-<p>
-  home works!
-</p>
+<app-header></app-header>
 
-<mat-form-field id="select-language">
-    <mat-select [(value)]="selected" (selectionChange)="switchLanguage()">
-      <mat-option *ngFor="let option of languages" value="{{ option.code }}">
-        {{ option.name }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
+<div> Feracode </div>
 
-<button (click)="openModallogin()">Teste</button>
-
-<!-- <app-login></app-login> -->
+<app-footer></app-footer>

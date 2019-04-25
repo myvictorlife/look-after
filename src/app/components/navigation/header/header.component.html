@@ -1,0 +1,10 @@
+<mat-form-field id="select-language">
+    <mat-select [(value)]="selected" (selectionChange)="switchLanguage()">
+      <mat-option *ngFor="let option of languages" value="{{ option.code }}">
+        {{ option.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+<button (click)="openLoginModal()">Login</button>
+<button (click)="openCreateUserModal()">Create User</button>
