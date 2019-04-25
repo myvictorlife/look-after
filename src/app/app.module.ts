@@ -7,28 +7,14 @@ import { AppRoutingModule } from './app-routing-module/app-routing.module';
 
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { FlexLayoutModule } from '@angular/flex-layout';
-import {
-  MatToolbarModule,
-  MatButtonModule,
-  MatSidenavModule,
-  MatIconModule,
-  MatListModule,
-  MatCardModule,
-  MatGridListModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatDialogModule,
-  MatTooltipModule,
-  MatExpansionModule,
-  MatProgressSpinnerModule,
-  MatSelectModule,
-} from "@angular/material";
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 
+// Modules
+import { AppMaterialModule } from './app-material/app-material.module';
 // COMPONENT
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -64,20 +50,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReactiveFormsModule,
     AppRoutingModule,
     FlexLayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatCardModule,
-    MatGridListModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatDialogModule,
-    MatTooltipModule,
-    MatExpansionModule,
-    MatProgressSpinnerModule,
-    MatSelectModule,
+    AppMaterialModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
