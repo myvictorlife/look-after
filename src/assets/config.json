@@ -1,0 +1,5 @@
+{
+    "baseUrl" : "http://subscription.development.essential.actuasys.com",
+    "buildVersion": "0.0",
+    "LoginUrl":"/api/v1/login"
+}
