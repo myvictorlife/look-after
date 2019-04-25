@@ -72,7 +72,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     }
   ],
   entryComponents: [
-    DialogComponent
+    DialogComponent,
+    LoginComponent
   ],
   bootstrap: [AppComponent]
 })

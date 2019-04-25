@@ -1,29 +1,29 @@
 <div fxLayout="row" fxLayoutAlign="center center">
-    <mat-card fxFlex="20" [fxFlex.md]="100" [fxFlex.sm]="100" [fxFlex.xs]="100">
-    <mat-card-title fxLayoutAlign="center">Login</mat-card-title>
+  <mat-card fxFlex="100" [fxFlex.md]="100" [fxFlex.sm]="100" [fxFlex.xs]="100">
+    <mat-card-title fxLayoutAlign="center">{{ 'Login.Title' | translate }}</mat-card-title>
     <mat-card-content>
       <form [formGroup]="form" (ngSubmit)="submit()">
 
         <div fxLayout="row">
           <mat-form-field fxFill>
-              <input type="text" matInput placeholder="{{ 'Login.Email' | translate}}" formControlName="emailControl">
+              <input type="text" matInput placeholder="{{ 'Login.Email' | translate}}" formControlName="emailControl"
+              pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,3})+$" required>
+              <mat-error *ngIf="form.get('emailControl').invalid">{{getEmailErrorMessage()}}</mat-error>
+              
             </mat-form-field>
         </div>
+        
         <div fxLayout="row">
             <mat-form-field fxFill>
-              <input type="password" matInput placeholder="{{ 'Login.Password' | translate }}" formControlName="password">
+              <input type="password" matInput placeholder="{{ 'Login.Password' | translate }}" formControlName="password" required>
+              <mat-error *ngIf="form.get('password').invalid">{{getPasswordErrorMessage()}}</mat-error>
             </mat-form-field>
         </div>
         
-
-        <p *ngIf="error" class="error">
-          {{ error }}
-        </p>
-
+        <br/>
         <div fxLayout="row" fxLayoutAlign="center center">
-          <button class="buttonGroup" type="submit" mat-raised-button color="primary">Login</button>
+          <button class="buttonGroup" type="submit" (click)="login()" mat-raised-button color="primary">{{ 'Login.Login' | translate }}</button>
         </div>
-        
 
       </form>
     </mat-card-content>

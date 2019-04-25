@@ -3,7 +3,11 @@
   "Company": "Look After",
   "Login": {
     "Title": "Login",
+    "Login": "Login",
     "Email": "Email",
-    "Password": "Password"
+    "Password": "Password",
+    "MustBeValue" : "You must enter a value",
+    "InvalidEmail" : "Not a valid email ex: example@lookafter.com",
+    "PasswordRequired" : ""
   }
 }
