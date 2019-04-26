@@ -1,10 +1,23 @@
-<mat-form-field id="select-language">
-    <mat-select [(value)]="selected" (selectionChange)="switchLanguage()">
-      <mat-option *ngFor="let option of languages" value="{{ option.code }}">
-        {{ option.name }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-
-<button (click)="openLoginModal()">Login</button>
-<button (click)="openCreateUserModal()">Create User</button>
+<mat-toolbar class="background-header">
+  
+    <mat-toolbar-row>
+      <span>{{ 'Company' | translate}}</span>
+      <span class="example-spacer"></span>
+      <div mat-button [matMenuTriggerFor]="menu" class="cursor material-icon">
+          <mat-icon class="style-icon" aria-hidden="false">language</mat-icon>
+      </div>
+      <div fxLayout="column">
+          <mat-menu #menu="matMenu">
+            <div *ngFor="let item of this.languages;let i = index" id={{i}}>
+              <a mat-menu-item (click)="switchLanguage(item.code)" title={{item.name}} >{{item.name}}</a>
+            </div>
+          </mat-menu>
+      </div>
+      <button class="buttonGroup"
+          mat-raised-button 
+          color="primary" (click)="openCreateUserModal()">CREATE USER</button>
+      <button class="buttonGroup"
+          mat-raised-button 
+          color="primary" (click)="openLoginModal()">ACESSAR</button>
+    </mat-toolbar-row>
+  </mat-toolbar>

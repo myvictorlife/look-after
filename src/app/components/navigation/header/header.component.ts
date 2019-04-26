@@ -27,6 +27,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  redirectDashboard() {
+    
+  }
+
   switchLanguage() {
     this.translate.use(this.selected);
   }

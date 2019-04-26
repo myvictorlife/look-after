@@ -12,4 +12,8 @@ export class FooterComponent implements OnInit {
   ngOnInit() {
   }
 
+  openSocialMedia(socialMedia: string){
+    console.log(socialMedia);
+  }
+
 }
