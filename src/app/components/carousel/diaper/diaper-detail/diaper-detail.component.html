@@ -1,0 +1,11 @@
+<mat-card class="diaper-detail-card">
+  <img mat-card-image src="{{ diaper.img }}">
+  
+  <mat-card-content>
+    <h4>{{ diaper.name }}</h4>
+    <p> {{ diaper.description}} </p>
+  </mat-card-content>
+  <mat-card-actions >
+    <button mat-raised-button color="primary">{{ 'DiaperDetail.Buy' | translate }}</button>
+  </mat-card-actions>
+</mat-card>

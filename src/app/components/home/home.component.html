@@ -1,15 +1,12 @@
 <div 
-  gdAreas="header header | side content | footer footer"
+  gdAreas="header header | content content | footer footer"
   gdGap="16px"
   gdRows="auto auto auto">
   <div gdArea="header">
     <app-header></app-header>
    </div>
-  <div gdArea="side">
-    Side
-   </div>
   <div gdArea="content">
-        <h1> Feracode </h1>
+    <app-carousel fxLayout="row wrap" fxLayoutAlign="center stretch"></app-carousel>
   </div>
   <div gdArea="footer">
         <app-footer></app-footer>

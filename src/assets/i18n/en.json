@@ -21,5 +21,9 @@
     "MustBeValue" : "You must enter a value",
     "MessageMinLengthName" : "Name must be at least {{ characters }} characters",
     "MessageMinAndMaxLengthPhone" : "Phone must be at least {{ min }} and {{ max }} characters"
+  },
+  "DiaperDetail" : {
+    "Title": "Diaper Detail",
+    "Buy" : "Buy"
   }
 }

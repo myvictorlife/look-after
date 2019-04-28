@@ -1,0 +1,59 @@
+{
+	"products" : [
+		{
+            "code" : "1",
+            "img" : "../../../../assets/im/diapers1.jpg",
+			"name" : "Recém Nascido",
+			"description" : "7 packs of stylish, super absorbent diapers + 4 packs of soft, plant-based wipes",
+			"size" : "0-3 Meses" 
+		},
+		{
+            "code" : "2",
+            "img" : "../../../../assets/im/diapers2.jpg",
+			"name" : "Bebê",
+			"description" : "Super-Soft Liner: Cloudlike liner provides ultimate comfort for baby's delicate skin while rapidly funneling away moisture-helping to keep baby happy, dry and comfortable",
+			"size" : "3-12 Meses" 
+		},
+		{
+            "code" : "3",
+            "img" : "../../../../assets/im/diapers3.jpg",
+			"name" : "Criança Pequena",
+			"description" : "Honestly Secure™ Fit: Soft, stretchy side panels, comfy elastic waistband, sure-fit leg cuffs and fastening tabs — blowouts be gone!",
+			"size" : "12+ Meses" 
+		},
+		{
+            "code" : "4",
+            "img" : "../../../../assets/im/diapers4.jpg",
+			"name" : "Idosos",
+			"description" : "*Eco-Friendly Materials: Bio-based core with sustainably harvested fluff pulp and plant-derived materials",
+			"size" : "60+" 
+		},{
+            "code" : "5",
+            "img" : "../../../../assets/im/diapers5.jpg",
+			"name" : "Recém Nascido",
+			"description" : "Dermatologist tested hypoallergenic diapers",
+			"size" : "0-3 Meses" 
+		},
+		{
+            "code" : "6",
+            "img" : "../../../../assets/im/diapers6.jpg",
+			"name" : "Bebê",
+			"description" : "Designed in cute classic and seasonal prints",
+			"size" : "3-12 Meses" 
+		},
+		{
+            "code" : "7",
+            "img" : "../../../../assets/im/diapers7.jpg",
+			"name" : "Criança Pequena",
+			"description" : "Weight range: up to 10 lbs - 35 lbs",
+			"size" : "12+ Meses" 
+		},
+		{
+            "code" : "8",
+            "img" : "../../../../assets/im/diapers8.jpg",
+			"name" : "Idosos",
+			"description" : "Learn more about our gentle diapers here",
+			"size" : "60+" 
+		}
+	]
+}

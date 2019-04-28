@@ -13,12 +13,17 @@ import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 
-
 // Modules
 import { AppMaterialModule } from './app-material/app-material.module';
+
 // COMPONENT
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { CarouselItemElement } from './components/carousel/carousel-template/carousel-template.component'
+import { DiaperComponent } from './components/carousel/diaper/diaper.component';
+import { CarouselTemplateComponent } from './components/carousel/carousel-template/carousel-template.component';
+import { DiaperDetailComponent } from './components/carousel/diaper/diaper-detail/diaper-detail.component';
 
 // SERVICES
 import { ConfigService } from './configuration/config.service';
@@ -30,8 +35,10 @@ import { HomeComponent } from './components/home/home.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { CreateUserComponent } from './components/create-user/create-user.component';
 import { OnlyNumber } from './directives/only-number.directive';
+import { CarouselItemDirective } from './components/carousel/carousel-template/directives/carousel-item.directive';
 import { FooterComponent } from './components/navigation/footer/footer.component';
 import { HeaderComponent } from './components/navigation/header/header.component';
+
 
 export function ConfigLoader(configService: ConfigService) {
     return () => configService.load();
@@ -50,7 +57,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     CreateUserComponent,
     OnlyNumber,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    CarouselComponent,
+    CarouselItemElement,
+    DiaperComponent,
+    CarouselTemplateComponent,
+    CarouselItemDirective,
+    DiaperDetailComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -82,7 +95,10 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   entryComponents: [
     DialogComponent,
-    LoginComponent
+    LoginComponent,
+    DiaperComponent,
+    CarouselTemplateComponent,
+    DiaperDetailComponent
   ],
   bootstrap: [AppComponent]
 })
