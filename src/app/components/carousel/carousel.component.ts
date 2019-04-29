@@ -11,13 +11,11 @@ export class CarouselComponent implements OnInit {
   diapersList: any = {}; 
   formatDiapersList: any[] = [];
   @Input() showControls = true;
-  isMobileOrDesktop: boolean = false; // true - modile  false - desktop
 
   @ViewChild('defaultTabButtons')
   private defaultTabButtonsTpl: TemplateRef<any>;
 
   constructor() {
-    console.log(this.defaultTabButtonsTpl)
     let products: DiapersModal[];
     this.diapersList.products = products;
   }
@@ -25,10 +23,15 @@ export class CarouselComponent implements OnInit {
   ngOnInit() {
     
     this.diapersList = DiapersFile.products;
-    this.formatDiapersList = this.mountArrayDiapers();  
+    this.formatDiapersList = this.getAndMountArrayDiapers();  
   }
 
-  mountArrayDiapers() {
+  /** 
+   * Mount Array 4 by 4 
+   * 
+   * Return [ [{}, {}, {}, {}], [{}, {}, {}, {}] ] 
+   * */
+  getAndMountArrayDiapers() {
     let diapersList : any[] = [];
     let diapers : DiapersModal[] = [];
     
@@ -46,12 +49,5 @@ export class CarouselComponent implements OnInit {
       diapersList.push(diapers);
     }
     return diapersList
-  }
-
-  isDesktop() {
-    return !this.isMobileOrDesktop;
-  }
-  isMobile() {
-    return this.isMobileOrDesktop;
   }
 }

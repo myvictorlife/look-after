@@ -14,7 +14,7 @@ export class DiaperComponent implements OnInit {
 
   ngOnInit() { }
 
-  onClick(diaper, disableOnClick) {
+  onClick(diaper) {
     const dialogRef = this.dialog.open(DiaperDetailComponent, {
       width: '500px',
     });

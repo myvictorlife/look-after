@@ -15,18 +15,24 @@ export class CarouselItemElement {
   styleUrls: ['./carousel-template.component.scss']
 })
 export class CarouselTemplateComponent implements AfterViewInit {
+
   @ContentChildren(CarouselItemDirective) items : QueryList<CarouselItemDirective>;
+
   @ViewChildren(CarouselItemElement, { read: ElementRef }) private itemsElements : QueryList<ElementRef>;
   @ViewChild('carousel') private carousel : ElementRef;
+
   @Input() timing = '500ms ease-in';
   @Input() timeLoop = 4000; // 4 seconds
+
   private player : AnimationPlayer;
   private itemWidth : number;
   private currentSlide = 0;
-  carouselWrapperStyle = {};
   private timingCarousel : boolean = true;
 
+  carouselWrapperStyle = {};
+
   next() {
+
     if( this.currentSlide + 1 === this.items.length )  {
       this.currentSlide = -1;
     };;
@@ -52,6 +58,7 @@ export class CarouselTemplateComponent implements AfterViewInit {
   }
 
   prev() {
+
     if( this.currentSlide === 0 ) {
       this.currentSlide = this.items.length;
     };
@@ -76,10 +83,16 @@ export class CarouselTemplateComponent implements AfterViewInit {
     })
   }
 
+  /**
+   * Stops moving when mouse enter
+   */
   mouseEnter(){
     this.timingCarousel = false;
   }
 
+  /**
+   * Starts moving when mouse leave
+   */
   mouseLeave() {
     this.timingCarousel = true;
   }
