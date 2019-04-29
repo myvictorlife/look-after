@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "node serve.js",
     "build": "ng build",
-    "postinstall": "ng build --aot --prod",
+    "preinstall":   "npm install -g http-server",
+    "postinstall":  "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
