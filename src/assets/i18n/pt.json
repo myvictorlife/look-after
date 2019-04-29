@@ -2,6 +2,10 @@
   "Language": "pt",
   "Company": "Look After",
   "DeveloperCompany": "FERACODE",
+  "Header" : {
+    "Login" : "Logar",
+    "CreateUser" : "Criar Usuário"
+  },
   "Login": {
     "Title": "Login",
     "Login": "Entrar",

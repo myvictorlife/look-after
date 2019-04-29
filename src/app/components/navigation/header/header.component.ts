@@ -16,11 +16,10 @@ export class HeaderComponent implements OnInit {
     { code: "pt", name: "Português" },
     { code: "en", name: "English" }
   ];
-  selected: string;
+
   constructor(private translate: TranslateService, public dialog: MatDialog, private router: Router) {
     translate.setDefaultLang("en");
     let browserLang = translate.getBrowserLang();
-    this.selected = browserLang;
     translate.use(browserLang.match(/en|pt/) ? browserLang : "en");
    }
 
@@ -31,8 +30,8 @@ export class HeaderComponent implements OnInit {
     
   }
 
-  switchLanguage() {
-    this.translate.use(this.selected);
+  switchLanguage(language) {
+    this.translate.use(language);
   }
 
   openLoginModal() {
