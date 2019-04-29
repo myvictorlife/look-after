@@ -1,11 +1,22 @@
-<div style="margin: 2em" class="container"  fxLayoutAlign="center stretch">
-  <carousel [showControls]="true">
+
+<div style="margin: 2em" class="container" fxHide fxShow.lg fxShow.xl >
+  <carousel [timeLoop]="4000">
     <ng-container *ngFor="let diapers of formatDiapersList">
         <ng-container *carouselItem>
           <ng-container *ngFor="let diaper of diapers">
-              <app-diaper  [diaper]="diaper" fxFlex="10"></app-diaper>
+              <app-diaper  [diaper]="diaper" fxFlex="25"></app-diaper>
           </ng-container>
         </ng-container>
     </ng-container>
   </carousel>
+</div>
+
+<div style="margin: 2em" fxHide fxShow.xs>
+    <carousel [timeLoop]="4000">
+      <ng-container *ngFor="let diaper of diapersList">
+          <ng-container *carouselItem>
+                <app-diaper  [diaper]="diaper" fxFlex="100"></app-diaper>
+          </ng-container>
+      </ng-container>
+    </carousel>
 </div>

@@ -18,12 +18,13 @@ export class CarouselTemplateComponent implements AfterViewInit {
   @ContentChildren(CarouselItemDirective) items : QueryList<CarouselItemDirective>;
   @ViewChildren(CarouselItemElement, { read: ElementRef }) private itemsElements : QueryList<ElementRef>;
   @ViewChild('carousel') private carousel : ElementRef;
-  @Input() timing = '250ms ease-in';
-  @Input() showControls = true;
+  @Input() timing = '500ms ease-in';
+  @Input() timeLoop = 4000; // 4 seconds
   private player : AnimationPlayer;
   private itemWidth : number;
   private currentSlide = 0;
   carouselWrapperStyle = {};
+  private timingCarousel : boolean = true;
 
   next() {
     if( this.currentSlide + 1 === this.items.length )  {
@@ -37,6 +38,13 @@ export class CarouselTemplateComponent implements AfterViewInit {
     this.player.play();
   }
 
+  ngOnInit() {
+    setInterval(() => {
+      if(this.timingCarousel){
+        this.next();
+      }
+    }, this.timeLoop);
+  }
   private buildAnimation( offset ) {
     return this.builder.build([
       animate(this.timing, style({ transform: `translateX(-${offset}px)` }))
@@ -65,8 +73,15 @@ export class CarouselTemplateComponent implements AfterViewInit {
       this.carouselWrapperStyle = {
         width: `${this.itemWidth}px`
       }
-    });
-    
+    })
+  }
+
+  mouseEnter(){
+    this.timingCarousel = false;
+  }
+
+  mouseLeave() {
+    this.timingCarousel = true;
   }
 
 }

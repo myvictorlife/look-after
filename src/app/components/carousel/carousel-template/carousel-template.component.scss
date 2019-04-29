@@ -2,9 +2,19 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    width: 7000px;
+    width: 2500px;
   }
 
   .carousel-wrapper {
     overflow: hidden;
   }
+
+.button-next {
+    box-shadow: 0 0 0 0;
+    z-index: 1;
+}
+.button-prev {
+
+    box-shadow: 0 0 0 0;
+    z-index: 1;
+}

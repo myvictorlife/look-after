@@ -1,6 +1,7 @@
 {
   "Language": "pt",
   "Company": "Look After",
+  "DeveloperCompany": "FERACODE",
   "Login": {
     "Title": "Login",
     "Login": "Entrar",
@@ -24,5 +25,10 @@
   "DiaperDetail" : {
     "Title": "Diaper Detail",
     "Buy" : "Comprar"
+  },
+  "Footer" : {
+    "Title" : "Footer",
+    "Contact" : "Contato",
+    "SocialMedia": "Social Media"
   }
 }

@@ -1,38 +1,18 @@
-#copyright {
+
+.col {
+  padding: 25px;
+}
+
+  .section-top{
+    
+    background-color: #ffdd03;
+  }
+  .section-copyright{
+    background-color: #ffdd03;
+  }
+
+  #copyright {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
-  }
-  
-  footer{
-    background: #ffdd03;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap; /*flex items will wrap onto multiple lines, from top to bottom.*/
-  }
-  .section-top{
-   display: flex; 
-   justify-content: center; /*items are centered along the line*/
-   padding: 20px 0;
-   color: #636363;
-   }
-  .col{
-    margin: 0 15px;
-  }
-  .white {
-    color: white;
-  }
-  @media all and (max-width: 600px){ /*style if screen size is <600px*/
-  .section-top{
-      flex-direction: column;
-  }
-  .col{
-    text-align: center;
-    width: 100%;
-    margin: 0
-  }
-  }
-
-  .mouse-over{
-      cursor: pointer;
   }

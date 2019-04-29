@@ -1,23 +1,30 @@
 <mat-toolbar class="background-header">
   
-    <mat-toolbar-row>
-      <span>{{ 'Company' | translate}}</span>
-      <span class="example-spacer"></span>
-      <div mat-button [matMenuTriggerFor]="menu" class="cursor material-icon">
-          <mat-icon class="style-icon" aria-hidden="false">language</mat-icon>
+    <mat-toolbar-row fxLayout="row wrap" fxFlexFill style="padding: 20px">
+      
+        <div><span>{{ 'Company' | translate}}</span> </div>
+      
+
+        <div mat-button [matMenuTriggerFor]="menu" class="cursor material-icon">
+            <mat-icon class="style-icon" aria-hidden="false">language</mat-icon>
+        </div>
+      
+        <div fxFlex="80" fxFlexAlign="end">
+            <button class="buttonGroup"
+                mat-raised-button 
+                color="primary" (click)="openCreateUserModal()">CREATE USER</button>
+            &nbsp;
+            <button class="buttonGroup"
+                mat-raised-button 
+                color="primary" (click)="openLoginModal()">ACESSAR</button>
       </div>
-      <div fxLayout="column">
-          <mat-menu #menu="matMenu">
-            <div *ngFor="let item of this.languages;let i = index" id={{i}}>
-              <a mat-menu-item (click)="switchLanguage(item.code)" title={{item.name}} >{{item.name}}</a>
-            </div>
-          </mat-menu>
-      </div>
-      <button class="buttonGroup"
-          mat-raised-button 
-          color="primary" (click)="openCreateUserModal()">CREATE USER</button>
-      <button class="buttonGroup"
-          mat-raised-button 
-          color="primary" (click)="openLoginModal()">ACESSAR</button>
     </mat-toolbar-row>
   </mat-toolbar>
+
+<div fxLayout="column">
+    <mat-menu #menu="matMenu">
+        <div *ngFor="let item of this.languages;let i = index" id={{i}}>
+        <a mat-menu-item (click)="switchLanguage(item.code)" title={{item.name}} >{{item.name}}</a>
+        </div>
+    </mat-menu>
+</div>

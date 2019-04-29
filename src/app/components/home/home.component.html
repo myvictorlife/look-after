@@ -6,7 +6,10 @@
     <app-header></app-header>
    </div>
   <div gdArea="content">
-    <app-carousel fxLayout="row wrap" fxLayoutAlign="center stretch"></app-carousel>
+    <app-carousel fxLayout="row wrap" fxLayoutAlign="center stretch" 
+    [showControls]="true" 
+    [fxFlex.md]="100" [fxFlex.sm]="100" [fxFlex.xs]="100">
+  </app-carousel>
   </div>
   <div gdArea="footer">
         <app-footer></app-footer>
