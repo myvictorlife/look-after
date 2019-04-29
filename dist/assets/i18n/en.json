@@ -1,0 +1,35 @@
+{
+  "Language": "en",
+  "Company": "Look After",
+  "DeveloperCompany": "FERACODE",
+  "Login": {
+    "Title": "Login",
+    "Login": "Login",
+    "Email": "Email",
+    "Password": "Password",
+    "MustBeValue" : "You must enter a value",
+    "InvalidEmail" : "Not a valid email ex: example@lookafter.com",
+    "PasswordRequired" : ""
+  },
+  "CreateUser" : {
+    "Title" : "Create your account",
+    "SignUp" : "Sign Up",
+    "Name": "Full name",
+    "Phone": "Phone",
+    "Email": "Email",
+    "Password": "Password",
+    "Close": "Close",
+    "MustBeValue" : "You must enter a value",
+    "MessageMinLengthName" : "Name must be at least {{ characters }} characters",
+    "MessageMinAndMaxLengthPhone" : "Phone must be at least {{ min }} and {{ max }} characters"
+  },
+  "DiaperDetail" : {
+    "Title": "Diaper Detail",
+    "Buy" : "Buy"
+  },
+  "Footer" : {
+    "Title" : "Footer",
+    "Contact" : "Contact",
+    "SocialMedia": "Social Media"
+  }
+}
