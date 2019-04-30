@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ContentChildren, Directive, ElementRef, Input, OnInit, QueryList, TemplateRef, ViewChild, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ContentChildren, Directive, ElementRef, Input, OnInit, QueryList, TemplateRef, ViewChild, ViewChildren, ChangeDetectorRef } from '@angular/core';
 import { CarouselItemDirective } from './directives/carousel-item.directive';
 import { animate, AnimationBuilder, AnimationFactory, AnimationPlayer, style } from '@angular/animations';
 
@@ -70,7 +70,7 @@ export class CarouselTemplateComponent implements AfterViewInit {
     this.player.play();
   }
 
-  constructor( private builder : AnimationBuilder ) {
+  constructor( private builder : AnimationBuilder, private cdr: ChangeDetectorRef ) {
   }
 
   ngAfterViewInit() {
@@ -80,6 +80,7 @@ export class CarouselTemplateComponent implements AfterViewInit {
       this.carouselWrapperStyle = {
         width: `${this.itemWidth}px`
       }
+      this.cdr.detectChanges();
     })
   }
 
