@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewChild, TemplateRef } from '@angular/core';
-import { DiapersModal } from '../../modals/diapers.modal';
+import { DiapersModal } from '../../models/diapers.model';
 import DiapersFile from "../../../assets/data/diapers.json";
 
 @Component({

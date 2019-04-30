@@ -1,7 +1,9 @@
 import { Component, OnInit, Output, EventEmitter } from  '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { TranslateService } from "@ngx-translate/core";
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { LoginService } from '../../services/login/login.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,6 +11,9 @@ import { LoginService } from '../../services/login/login.service';
 })
 export class LoginComponent implements OnInit {
 
+  faEye = faEye;
+  faEyeSlash = faEyeSlash;
+  showPassword:boolean = false;
   loginForm: FormGroup = new FormGroup({
     emailControl: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required]),

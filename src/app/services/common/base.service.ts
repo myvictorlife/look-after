@@ -24,7 +24,6 @@ export class BaseService {
 
   // Http Get with parameters
   basePut<T>(url: string, parameter: T) {
-    debugger
     return this.http.put(url, parameter, (parameter != null ?
         this.getParameters<T>(parameter) : {
              headers: SharedService.getAuthorizationHeader()

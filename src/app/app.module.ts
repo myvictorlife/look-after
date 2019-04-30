@@ -7,11 +7,13 @@ import { AppRoutingModule } from './app-routing-module/app-routing.module';
 
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+import { CookieService } from 'ngx-cookie-service';
 
 // Modules
 import { AppMaterialModule } from './app-material/app-material.module';
@@ -31,6 +33,7 @@ import { SharedService } from './services/common/shared.service';
 import { LoginService } from './services/login/login.service';
 // UTILITIES
 import { GenericUtilities } from './utilities/generic-utilities';
+import { CookieUtilities } from './utilities/cookie-utilities';
 import { HomeComponent } from './components/home/home.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { CreateUserComponent } from './components/create-user/create-user.component';
@@ -72,6 +75,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReactiveFormsModule,
     AppRoutingModule,
     FlexLayoutModule,
+    FontAwesomeModule,
     AppMaterialModule,
     HttpClientModule,
     TranslateModule.forRoot({
@@ -86,13 +90,15 @@ export function HttpLoaderFactory(http: HttpClient) {
     ConfigService,
     SharedService,
     LoginService,
+    CookieUtilities,
     GenericUtilities,
     {
       provide: APP_INITIALIZER,
       useFactory: ConfigLoader,
       deps: [ConfigService],
       multi: true
-    }
+    },
+    CookieService
   ],
   entryComponents: [
     DialogComponent,

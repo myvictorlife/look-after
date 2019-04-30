@@ -14,10 +14,16 @@
         </div>
         
         <div fxLayout="row">
-            <mat-form-field fxFill>
+            <mat-form-field fxFill *ngIf="!showPassword">
               <input type="password" matInput placeholder="{{ 'Login.Password' | translate }}" formControlName="password" required>
+              <fa-icon matSuffix style="cursor: pointer;" (click)="showPassword = !showPassword" [icon]="faEye"></fa-icon>
               <mat-error *ngIf="loginForm.get('password').invalid">{{getPasswordErrorMessage()}}</mat-error>
             </mat-form-field>
+            <mat-form-field fxFill *ngIf="showPassword">
+                <input type="text" matInput placeholder="{{ 'Login.Password' | translate }}" formControlName="password" required>
+                <fa-icon matSuffix [icon]="faEyeSlash" style="cursor: pointer;" (click)="showPassword = !showPassword"></fa-icon>
+                <mat-error *ngIf="loginForm.get('password').invalid">{{getPasswordErrorMessage()}}</mat-error>
+              </mat-form-field>
         </div>
         
         <br/>
