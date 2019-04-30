@@ -1,0 +1,11 @@
+<mat-card>
+    {{ 'Welcome.WillBeAvailableSoon' | translate }}
+</mat-card>
+<br/>
+<mat-card>
+  {{ user | json}}
+</mat-card>
+<br/>
+<button class="buttonGroup"
+                mat-raised-button 
+                color="primary" (click)="redirectToHome()">{{ 'Welcome.Home' | translate }}</button>

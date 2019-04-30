@@ -54,7 +54,7 @@ export class HeaderComponent implements OnInit {
     });
     const sub = dialogRef.componentInstance.submitEM.subscribe(() => {
       dialogRef.close();
-      this.router.navigate(["create-user"]);
+      this.router.navigate(["welcome"]);
     });
   }
 

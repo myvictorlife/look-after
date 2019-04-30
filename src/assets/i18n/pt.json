@@ -7,6 +7,11 @@
     "CreateUser" : "Criar Usuário",
     "Logoff" : "Sair"
   },
+  "Welcome" : {
+    "Title" : "Welcome",
+    "WillBeAvailableSoon" : "As compras on-line estarão disponíveis em breve",
+    "Home" : "Home"
+  },
   "Login": {
     "Title": "Login",
     "Login": "Entrar",

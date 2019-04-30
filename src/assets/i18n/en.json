@@ -7,6 +7,11 @@
     "CreateUser" : "Create User",
     "Logoff" : "Logoff"
   },
+  "Welcome" : {
+    "Title" : "Welcome",
+    "WillBeAvailableSoon" : "Online shopping will be available soon",
+    "Home" : "Home"
+  },
   "Login": {
     "Title": "Login",
     "Login": "Login",

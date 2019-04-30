@@ -41,6 +41,7 @@ import { OnlyNumber } from './directives/only-number.directive';
 import { CarouselItemDirective } from './components/carousel/carousel-template/directives/carousel-item.directive';
 import { FooterComponent } from './components/navigation/footer/footer.component';
 import { HeaderComponent } from './components/navigation/header/header.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 
 export function ConfigLoader(configService: ConfigService) {
@@ -67,6 +68,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     CarouselTemplateComponent,
     CarouselItemDirective,
     DiaperDetailComponent,
+    WelcomeComponent,
   ],
   imports: [
     BrowserAnimationsModule,
