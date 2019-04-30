@@ -12,7 +12,7 @@
     "Email": "E-mail",
     "Password": "Senha",
     "MustBeValue" : "Você deve inserir um valor",
-    "InvalidEmail" : "Não é um email válido ex: example@lookafter.com"
+    "InvalidEmail" : "Não é um email válido(example@lookafter.com)"
   },
   "CreateUser" : {
     "Title" : "Crie sua conta",

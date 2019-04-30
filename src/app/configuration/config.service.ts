@@ -14,7 +14,7 @@ export class ConfigService
     if(!this.config)
       this.config = Configuration;
 
-    this.config.baseUrl = Config.baseUrl;
+    this.config.BaseUrl = Config.BaseUrl;
     this.config.LoginUrl = Config.LoginUrl;
   }
 

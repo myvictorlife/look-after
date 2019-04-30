@@ -2,13 +2,17 @@
   "Language": "pt",
   "Company": "Look After",
   "DeveloperCompany": "FERACODE",
+  "Header" : {
+    "Login" : "Logar",
+    "CreateUser" : "Criar Usuário"
+  },
   "Login": {
     "Title": "Login",
     "Login": "Entrar",
     "Email": "E-mail",
     "Password": "Senha",
     "MustBeValue" : "Você deve inserir um valor",
-    "InvalidEmail" : "Não é um email válido ex: example@lookafter.com"
+    "InvalidEmail" : "Não é um email válido(example@lookafter.com)"
   },
   "CreateUser" : {
     "Title" : "Crie sua conta",

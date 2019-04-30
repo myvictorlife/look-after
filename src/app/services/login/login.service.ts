@@ -15,8 +15,10 @@ export class LoginService extends BaseService {
   }
     
   loginPut(data: any) {
-      return super.basePutWithParameter(this.requestPath.BaseUrl + this.requestPath.LoginUrl, data)
-          .map(res => res);
+      return super.basePut(this.requestPath.BaseUrl + this.requestPath.LoginUrl, data)
+      .subscribe(result => {
+        console.log(result);
+      });
   }
 
   private subject = new Subject<any>();

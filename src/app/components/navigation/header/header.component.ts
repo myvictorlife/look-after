@@ -36,7 +36,7 @@ export class HeaderComponent implements OnInit {
 
   openLoginModal() {
     const dialogRef = this.dialog.open(LoginComponent, {
-      width: '300px'
+      width: '350px'
     });
     const sub = dialogRef.componentInstance.submitEM.subscribe(() => {
       dialogRef.close();

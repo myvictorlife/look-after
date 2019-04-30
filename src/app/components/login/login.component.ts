@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from  '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { TranslateService } from "@ngx-translate/core";
-
+import { LoginService } from '../../services/login/login.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -16,13 +16,16 @@ export class LoginComponent implements OnInit {
 
   @Output() submitEM = new EventEmitter();
 
-  constructor(public translate: TranslateService) { }
+  constructor(public translate: TranslateService, public loginService: LoginService) { }
 
   ngOnInit() {
   }
 
   login(){
     if (this.loginForm.valid) {
+      this.loginService.loginPut(this.loginForm.value);
+
+      // it's call function to close the dialog maybe need to change this logic later.
       this.submitEM.emit(this.loginForm.value);
     }
   }

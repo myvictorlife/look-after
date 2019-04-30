@@ -1,5 +1,5 @@
 {
-    "baseUrl" : "http://subscription.development.essential.actuasys.com",
+    "BaseUrl" : "https://www.mocky/",
     "buildVersion": "0.0",
-    "LoginUrl":"/api/v1/login"
+    "LoginUrl":"5cc78e03320000af39b9527a"
 }

@@ -1,5 +1,5 @@
 
-<div style="margin: 2em" class="container" fxHide fxShow.lg fxShow.xl >
+<div style="margin: 2em" class="container">
   <carousel [timeLoop]="4000">
     <ng-container *ngFor="let diapers of formatDiapersList">
         <ng-container *carouselItem>
@@ -11,7 +11,7 @@
   </carousel>
 </div>
 
-<div style="margin: 2em" fxHide fxShow.xs>
+<div style="margin: 2em">
     <carousel [timeLoop]="4000">
       <ng-container *ngFor="let diaper of diapersList">
           <ng-container *carouselItem>

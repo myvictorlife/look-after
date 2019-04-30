@@ -27,8 +27,8 @@ import { DiaperDetailComponent } from './components/carousel/diaper/diaper-detai
 
 // SERVICES
 import { ConfigService } from './configuration/config.service';
-import { SharedService } from './service/common/shared.service';
-
+import { SharedService } from './services/common/shared.service';
+import { LoginService } from './services/login/login.service';
 // UTILITIES
 import { GenericUtilities } from './utilities/generic-utilities';
 import { HomeComponent } from './components/home/home.component';
@@ -85,6 +85,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   providers: [
     ConfigService,
     SharedService,
+    LoginService,
     GenericUtilities,
     {
       provide: APP_INITIALIZER,
