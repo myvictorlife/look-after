@@ -14,9 +14,13 @@
                 mat-raised-button 
                 color="primary" (click)="openCreateUserModal()">{{ 'Header.CreateUser' | translate }}</button>
             &nbsp;
-            <button class="buttonGroup"
+            <button class="buttonGroup" *ngIf="!isLogged()"
                 mat-raised-button 
                 color="primary" (click)="openLoginModal()">{{ 'Header.Login' | translate }}</button>
+                &nbsp;
+            <button class="buttonGroup" *ngIf="isLogged()"
+                mat-raised-button 
+                color="primary" (click)="logoff()">{{ 'Header.Logoff' | translate }}</button>
       </div>
     </mat-toolbar-row>
   </mat-toolbar>

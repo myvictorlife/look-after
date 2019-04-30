@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewChild, TemplateRef } from '@angular/core';
-import { DiapersModal } from '../../models/diapers.model';
+import { DiapersModel } from '../../models/diapers.model';
 import DiapersFile from "../../../assets/data/diapers.json";
 
 @Component({
@@ -16,7 +16,7 @@ export class CarouselComponent implements OnInit {
   private defaultTabButtonsTpl: TemplateRef<any>;
 
   constructor() {
-    let products: DiapersModal[];
+    let products: DiapersModel[];
     this.diapersList.products = products;
   }
 
@@ -33,7 +33,7 @@ export class CarouselComponent implements OnInit {
    * */
   getAndMountArrayDiapers() {
     let diapersList : any[] = [];
-    let diapers : DiapersModal[] = [];
+    let diapers : DiapersModel[] = [];
     
     let i = 0;
     for(let diaper of this.diapersList){

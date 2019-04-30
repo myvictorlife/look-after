@@ -4,7 +4,8 @@
   "DeveloperCompany": "FERACODE",
   "Header" : {
     "Login" : "Login",
-    "CreateUser" : "Create User"
+    "CreateUser" : "Create User",
+    "Logoff" : "Logoff"
   },
   "Login": {
     "Title": "Login",

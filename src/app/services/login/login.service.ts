@@ -24,7 +24,7 @@ export class LoginService extends BaseService {
       return super.basePut(this.requestPath.BaseUrl + this.requestPath.LoginUrl, data)
       .subscribe(result => {
         this.cookieUtilities.setCookie("user", result, 60);
-        console.log(result);
+        this.user = result;
       });
   }
 
@@ -32,6 +32,10 @@ export class LoginService extends BaseService {
 
   isLoggedIn(message: boolean) {
       this.subject.next({ text: message });
+  }
+
+  logoff() {
+      this.cookieUtilities.deleteCookie('user');
   }
 
   getMessage(): Observable<any> {

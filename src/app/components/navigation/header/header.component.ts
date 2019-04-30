@@ -4,7 +4,8 @@ import { Router } from "@angular/router";
 import { MatDialog } from '@angular/material';
 import { LoginComponent } from '../../login/login.component';
 import { CreateUserComponent } from '../../create-user/create-user.component';
-
+import { UserModel } from '../../../models/user.model';
+import { LoginService } from '../../../services/login/login.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -16,14 +17,27 @@ export class HeaderComponent implements OnInit {
     { code: "pt", name: "Português" },
     { code: "en", name: "English" }
   ];
+  user: UserModel;
 
-  constructor(private translate: TranslateService, public dialog: MatDialog, private router: Router) {
+  constructor(private translate: TranslateService, public dialog: MatDialog, private router: Router, 
+    private loginService: LoginService) {
     translate.setDefaultLang("en");
     let browserLang = translate.getBrowserLang();
     translate.use(browserLang.match(/en|pt/) ? browserLang : "en");
-   }
+  }
 
   ngOnInit() {
+    this.user = this.loginService.getUser();
+  }
+
+  isLogged() {
+    return !!this.user && !!this.user.name;
+  }
+
+  logoff() {
+    // Implements logoff
+    this.loginService.logoff();
+    this.user = undefined;
   }
 
   redirectDashboard() {

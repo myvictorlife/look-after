@@ -1,4 +1,4 @@
-export interface UserModal {
+export interface UserModel {
     id: number,
     name: string,
     idade: string,

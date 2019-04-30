@@ -1,5 +1,5 @@
 
-export interface DiapersModal {
+export interface DiapersModel {
   code: number,
   img: string,
   name: string,
