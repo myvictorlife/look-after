@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Look After</title>
+  <meta name="author" content="Feracode">
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,8 +12,44 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"rel="stylesheet"/>
 
+
+  <script type="text/javascript">
+    loadtimer = new Date();
+  </script>
+  <script type="text/javascript">
+    rendertimer = new Date();
+  </script>
+  
 </head>
 <body>
+  <script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'googleAnalyticsRegister');
+
+      googleAnalyticsRegister('create', 'UA-ID', 'auto'); // <- add the UA-ID 
+      if (typeof window.onerror == "object") {
+        window.onerror = function (err, url, line) {
+          if (googleAnalyticsRegister) {
+            googleAnalyticsRegister('send', 'exception', {
+              'exDescription': line + " " + err
+            });
+          }
+        };
+      }
+      window.onload = function () {
+        googleAnalyticsRegister('trackEvent', 'loadtime', location.href, parseInt(new Date() - loadtimer));
+        googleAnalyticsRegister('trackEvent', 'time-to-render', location.href, parseInt(rendertimer - loadtimer));
+      }      
+    </script>
   <app-root></app-root>
 </body>
 </html>

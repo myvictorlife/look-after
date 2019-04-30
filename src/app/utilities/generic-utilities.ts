@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';  
 
+declare let googleAnalyticsRegister: Function;
 
 @Injectable()
 export class GenericUtilities 
@@ -16,6 +17,10 @@ export class GenericUtilities
    */
   public errorHandler(err) 
   {
-      // IMPLEMENTS    
+    googleAnalyticsRegister('send', 'exception', {
+      'exDescription': "Error :" + err.error + "\n Message : " + err.message,
+      'exFatal': false
+    });
+    // IMPLEMENTS    
   }
 }
