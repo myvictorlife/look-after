@@ -16,4 +16,8 @@ export class FooterComponent implements OnInit {
     console.log(socialMedia);
   }
 
+  goToLink(url: string){
+    window.open(url, "_blank");
+  }
+
 }
