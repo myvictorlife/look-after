@@ -42,6 +42,7 @@ import { CarouselItemDirective } from './components/carousel/carousel-template/d
 import { FooterComponent } from './components/navigation/footer/footer.component';
 import { HeaderComponent } from './components/navigation/header/header.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { StylesDirective } from './directives/styles.directive';
 
 
 export function ConfigLoader(configService: ConfigService) {
@@ -69,6 +70,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     CarouselItemDirective,
     DiaperDetailComponent,
     WelcomeComponent,
+    StylesDirective,
   ],
   imports: [
     BrowserAnimationsModule,
