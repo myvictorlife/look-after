@@ -58,7 +58,6 @@ export class CarouselTemplateComponent implements AfterViewInit {
   }
 
   prev() {
-
     if( this.currentSlide === 0 ) {
       this.currentSlide = this.items.length;
     };
@@ -74,7 +73,10 @@ export class CarouselTemplateComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    // For some reason only here I need to add setTimeout, in my local env it's working without this.
+    this.changeItemWidth();
+  }
+
+  changeItemWidth() {
     setTimeout(() => {
       this.itemWidth = this.itemsElements.first.nativeElement.getBoundingClientRect().width;
       this.carouselWrapperStyle = {
@@ -82,6 +84,9 @@ export class CarouselTemplateComponent implements AfterViewInit {
       }
       this.cdr.detectChanges();
     })
+  }
+  onResize() {
+    this.changeItemWidth();
   }
 
   /**

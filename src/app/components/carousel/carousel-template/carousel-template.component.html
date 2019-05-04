@@ -1,6 +1,6 @@
 <section id="carouselExampleControls" class="carousel-wrapper" 
 (mouseenter) ="mouseEnter()" (mouseleave) ="mouseLeave()"
-[ngStyle]="carouselWrapperStyle">
+[ngStyle]="carouselWrapperStyle" (window:resize)="onResize()">
   <ul fxLayout="row" #carousel>
     <li *ngFor="let item of items; let i = index" class="carousel-item">
       

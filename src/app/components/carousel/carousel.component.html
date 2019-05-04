@@ -1,5 +1,5 @@
 
-<div style="margin: 2em" class="container">
+<div style="margin: 2em" class="container" fxShow.sm="false"  fxShow.xs="false" fxShow.lt-md="false" fxShow="true">
   <carousel [timeLoop]="4000">
     <ng-container *ngFor="let diapers of formatDiapersList">
         <ng-container *carouselItem>
@@ -10,8 +10,8 @@
     </ng-container>
   </carousel>
 </div>
-<!-- <br/>
-<div style="margin: 2em">
+<br/>
+<div style="margin: 2em" fxShow.sm="true"  fxShow.xs="true" fxShow.lt-md="true" fxShow="false">
     <carousel [timeLoop]="4000">
       <ng-container *ngFor="let diaper of diapersList">
           <ng-container *carouselItem>
@@ -19,4 +19,4 @@
           </ng-container>
       </ng-container>
     </carousel>
-</div> -->
+</div>
