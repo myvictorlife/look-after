@@ -5,7 +5,10 @@
   "Header" : {
     "Login" : "Logar",
     "CreateUser" : "Criar Usuário",
-    "Logoff" : "Sair"
+    "Home" : "Home",
+    "Logoff" : "Sair",
+    "ContactUs": "Contate-nos",
+    "Blog" : "Blog"
   },
   "Welcome" : {
     "Title" : "Welcome",
