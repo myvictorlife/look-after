@@ -1,9 +1,7 @@
 
 .container-header {
-    background-color: #ffdd03;
-    color: #636363;
-    //height: 200px;
-    line-height: 3.8em;
+    background-color: #FF1493;
+    color: white;
 }
 
 .cursor {
@@ -21,6 +19,13 @@
     font-size: 22px;
     font-weight: 900;
 }
-button {
-    font-size: 1.1em;
+
+.logo {
+    position: relative;
+    z-index: 2;
+}
+
+.header-title-button {
+    font-size: 1.4em;
+    font-weight: 800;
 }

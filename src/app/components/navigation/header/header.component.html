@@ -1,18 +1,24 @@
-
 <div class="container-header" fxLayout.lg="row" fxLayout="column">
     <div class="col-company"  fxFlex="20" fxFlexAlign="center">
         <div fxLayout="row" fxLayoutAlign="center"> 
-            <span>{{ 'Company' | translate}}</span> 
+            <div class="logo site-header-img">
+                <img src="https://res.cloudinary.com/doiz6iue3/image/upload/v1556974739/logo_e05vom.png" />
+            </div>
         </div>
     </div>
-    <div class="col-items"  fxFlex="80" fxFlexAlign="center">
-       <div fxLayout="row-reverse" fxLayoutGap="20px">
-           <button mat-button (click)="openCreateUserModal()">{{ 'Header.CreateUser' | translate }}</button>
-           <button mat-button (click)="openLoginModal()">{{ 'Header.Login' | translate }}</button>
-           <div mat-button [matMenuTriggerFor]="menu" class="cursor material-icon">
+    <div class="col-items"  fxFlex="40" fxFlexAlign="center">
+            <button class="header-title-button" mat-button (click)="openCreateUserModal()">{{ 'Header.Home' | translate }}</button>
+            <button class="header-title-button" mat-button (click)="openLoginModal()">{{ 'Header.Blog' | translate }}</button>
+            <button class="header-title-button" mat-button (click)="openLoginModal()">{{ 'Header.ContactUs' | translate }}</button>
+        </div>
+    <div class="col-items"  fxFlex="40" fxFlexAlign="center">
+        <div fxLayout="row-reverse" fxLayoutGap="20px">
+            <button mat-button (click)="openCreateUserModal()">{{ 'Header.CreateUser' | translate }}</button>
+            <button mat-button (click)="openLoginModal()">{{ 'Header.Login' | translate }}</button>
+            <div mat-button [matMenuTriggerFor]="menu" class="cursor material-icon">
                 <mat-icon class="style-icon" aria-hidden="false">language</mat-icon>
             </div>
-       </div>
+        </div>
     </div>
 </div>
 
