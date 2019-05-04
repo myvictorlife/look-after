@@ -9,12 +9,14 @@
   </ul>
 </section>
 <div  style="margin-top: 1em; text-align: center" fxLayoutAlign="space-around">
-    <button (click)="prev()" href="#carouselExampleControls" mat-fab class="button-next">
+    <button (click)="prev()" (mouseenter) ="mouseEnter()" (mouseleave) ="mouseLeave()" 
+    href="#carouselExampleControls" mat-fab class="button-next">
         <i class="material-icons">
             arrow_back_ios
         </i>              
     </button>
-    <button (click)="next()" href="#carouselExampleControls" mat-fab class="button-prev">
+    <button (click)="next()" (mouseenter) ="mouseEnter()" (mouseleave) ="mouseLeave()"
+     href="#carouselExampleControls" mat-fab class="button-prev">
         <i class="material-icons">
             arrow_forward_ios
         </i>          
