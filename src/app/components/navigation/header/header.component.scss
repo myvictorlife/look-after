@@ -1,7 +1,9 @@
 
-.background-header {
-    background: #ffdd03;
+.container-header {
+    background-color: #ffdd03;
     color: #636363;
+    //height: 200px;
+    line-height: 3.8em;
 }
 
 .cursor {
@@ -10,4 +12,15 @@
 
 .style-icon {
     padding: 0 14px;
+}
+
+.material-icon{
+    margin-bottom: -16px;
+}
+.col-company span {
+    font-size: 22px;
+    font-weight: 900;
+}
+button {
+    font-size: 1.1em;
 }

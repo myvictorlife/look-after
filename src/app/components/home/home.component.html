@@ -1,33 +1,11 @@
-<div 
-  gdAreas="header header | content content | footer footer"
-  gdGap="16px"
-  gdRows="auto auto auto">
-  <div gdArea="header">
-    <app-header></app-header>
-   </div>
-  <div gdArea="content">
-    <div xLayout="row" fxLayoutAlign="center center">
-        <mat-card f fxFlex.lg="75" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" style="text-align: center; color: #636363; font-size: 26px" >
-            {{ 'Welcome.Welcome' | translate }}
-        </mat-card>
-    </div>
-    <div>
-      <p appStyles setStyleName="color" value="SPRINT_YELLOW">DEFAUT COLORS</p>
-      <p appStyles setStyleName="color" value="LIGHT_CHARCOAL">DEFAUT COLORS</p>
-      <p appStyles setStyleName="background-color" value="SPRINT_YELLOW">DEFAUT COLORS</p>
-
-        <app-carousel fxLayout="row wrap" fxLayoutAlign="center stretch" 
-          [showControls]="true" 
-          [fxFlex.md]="100" [fxFlex.sm]="100" [fxFlex.xs]="100">
-        </app-carousel>
-    </div>
-  </div>
-  <div gdArea="footer">
-        <app-footer></app-footer>
-  </div>
+<div xLayout="row" fxLayoutAlign="center center">
+  <mat-card f fxFlex.lg="75" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" style="text-align: center; color: #636363; font-size: 26px" >
+      {{ 'Welcome.Welcome' | translate }}
+  </mat-card>
 </div>
-
-
-
-
-
+<div>
+  <app-carousel fxLayout="row wrap" fxLayoutAlign="center stretch" 
+    [showControls]="true" 
+    [fxFlex.md]="100" [fxFlex.sm]="100" [fxFlex.xs]="100">
+  </app-carousel>
+</div>

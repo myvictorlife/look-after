@@ -4,7 +4,14 @@
   "DeveloperCompany": "FERACODE",
   "Header" : {
     "Login" : "Logar",
-    "CreateUser" : "Criar Usuário"
+    "CreateUser" : "Criar Usuário",
+    "Logoff" : "Sair"
+  },
+  "Welcome" : {
+    "Title" : "Welcome",
+    "WillBeAvailableSoon" : "As compras on-line estarão disponíveis em breve",
+    "Welcome" : "Seja bem vindo ao nosso site, aqui você encontra os melhores produtos para sua necessidade! Nós temos a melhor qualidade pelo melhor preço.",
+    "Home" : "Home"
   },
   "Login": {
     "Title": "Login",

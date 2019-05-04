@@ -1,29 +1,20 @@
-<mat-toolbar class="background-header">
-  
-    <mat-toolbar-row fxLayout="row wrap" fxFlexFill style="padding: 20px">
-      
-        <div><span>{{ 'Company' | translate}}</span> </div>
-      
 
-        <div mat-button [matMenuTriggerFor]="menu" class="cursor material-icon">
-            <mat-icon class="style-icon" aria-hidden="false">language</mat-icon>
+<div class="container-header" fxLayout.lg="row" fxLayout="column">
+    <div class="col-company"  fxFlex="20" fxFlexAlign="center">
+        <div fxLayout="row" fxLayoutAlign="center"> 
+            <span>{{ 'Company' | translate}}</span> 
         </div>
-      
-        <div fxFlex="80" fxFlexAlign="end">
-            <button class="buttonGroup"
-                mat-raised-button 
-                color="primary" (click)="openCreateUserModal()">{{ 'Header.CreateUser' | translate }}</button>
-            &nbsp;
-            <button class="buttonGroup" *ngIf="!isLogged()"
-                mat-raised-button 
-                color="primary" (click)="openLoginModal()">{{ 'Header.Login' | translate }}</button>
-                &nbsp;
-            <button class="buttonGroup" *ngIf="isLogged()"
-                mat-raised-button 
-                color="primary" (click)="logoff()">{{ 'Header.Logoff' | translate }}</button>
-      </div>
-    </mat-toolbar-row>
-  </mat-toolbar>
+    </div>
+    <div class="col-items"  fxFlex="80" fxFlexAlign="center">
+       <div fxLayout="row-reverse" fxLayoutGap="20px">
+           <button mat-button (click)="openCreateUserModal()">{{ 'Header.CreateUser' | translate }}</button>
+           <button mat-button (click)="openLoginModal()">{{ 'Header.Login' | translate }}</button>
+           <div mat-button [matMenuTriggerFor]="menu" class="cursor material-icon">
+                <mat-icon class="style-icon" aria-hidden="false">language</mat-icon>
+            </div>
+       </div>
+    </div>
+</div>
 
 <div fxLayout="column">
     <mat-menu #menu="matMenu">
